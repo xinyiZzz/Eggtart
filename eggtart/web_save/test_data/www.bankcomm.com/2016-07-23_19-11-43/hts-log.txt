@@ -1,0 +1,13 @@
+HTTrack3.46+libhtsjava.so.2 launched on Sat, 23 Jul 2016 19:11:24 at 10 http://www.bankcomm.com/BankCommSite/default.shtml
+(httrack -n -%k -%B -N1001 -u2 -%u -iC2 -r1 -T 10 -T10 -R0 -J1024 -R1 -H3 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/new http://www.bankcomm.com/BankCommSite/default.shtml )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:11:25	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+19:11:43	Error: 	"Receive Error" (-4) after 1 retries at link 10/ (from primary/primary)
+
+HTTrack Website Copier/3.46 mirror complete in 19 seconds : 45 links scanned, 41 files written (624285 bytes overall) [436647 bytes received at 22981 bytes/sec], 326974 bytes transfered using HTTP compression in 4 files, ratio 19%, 5.0 requests per connection
+(2 errors, 0 warnings, 0 messages)

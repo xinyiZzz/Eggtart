@@ -1,1 +1,19 @@
-{"task_name": "grays_check_test", "task_id": "1d2b97507f74a1aa1a9bf6f8416b3f5314712305311558", "run_win_engine": [], "waiting_engine": [], "run_error_engine": [], "url_list": ["https://www.baidu.com"], "cmd": "GRAYS_CHECK", "running_engine": [], "create_time": "2016-08-15_11-08-51", "add_way": "test", "error": [], "run_state": [], "output": "all", "task_engine": "04-06-07-08-11-12-13-14-15-16", "task_list": []}
+{
+  "task_name": "grays_check_test",
+  "task_id": "1d2b97507f74a1aa1a9bf6f8416b3f5314712305311558",
+  "run_win_engine": [],
+  "waiting_engine": [],
+  "run_error_engine": [],
+  "url_list": [
+    "https://www.baidu.com"
+  ],
+  "cmd": "GRAYS_CHECK",
+  "running_engine": [],
+  "create_time": "2016-08-15_11-08-51",
+  "add_way": "test",
+  "error": [],
+  "run_state": [],
+  "output": "all",
+  "task_engine": "04-06-07-08-11-12-13-14-15-16",
+  "task_list": []
+}

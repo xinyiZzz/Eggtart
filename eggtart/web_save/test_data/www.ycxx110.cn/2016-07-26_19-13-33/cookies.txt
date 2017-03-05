@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+ycxx110.cn	TRUE	/	FALSE	1999999999	safedog-flow-item	E9D85CAB16407D6F7E44D4B9D8D6F4FC
+

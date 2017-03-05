@@ -1,0 +1,16 @@
+HTTrack3.46+libhtsjava.so.2 launched on Wed, 24 Aug 2016 15:30:47 at 10 https://www.zhzhrf.com/
+(httrack -n -%k -%B -N1001 -u2 -%u -iC2 -r1 -T 10 -T10 -R0 -J1024 -R1 -H3 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhzhrf.com/new https://www.zhzhrf.com/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:30:47	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhzhrf.com/new/index-2.html.tmp already exists
+15:30:48	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+15:30:49	Error: 	"Interrupted transfer" (-4) after 1 retries at link https://www.zhzhrf.com/robots.txt (from primary/primary)
+15:30:49	Info: 	engine: warning: unserialize error for 10/ (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhzhrf.com/new/index-2.html), file disappeared: No such file or directory
+15:30:50	Error: 	"Interrupted transfer" (-4) after 1 retries at link https://www.zhzhrf.com/ (from primary/primary)
+
+HTTrack Website Copier/3.46 mirror complete in 3 seconds : 6 links scanned, 0 files written (0 bytes overall) [54327 bytes received at 18109 bytes/sec]
+(3 errors, 0 warnings, 2 messages)

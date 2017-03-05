@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.zhzhrf.com	TRUE	/	FALSE	1999999999	think_language	en
+www.zhzhrf.com	TRUE	/	FALSE	1999999999	PHPSESSID	ps00qkenn3jvfqjk4et17893d1
+www.zhzhrf.com	TRUE	/	FALSE	1999999999	think_template	default
+

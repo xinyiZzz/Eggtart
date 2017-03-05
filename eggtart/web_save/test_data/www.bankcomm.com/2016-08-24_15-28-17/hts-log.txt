@@ -1,0 +1,18 @@
+HTTrack3.46+libhtsjava.so.2 launched on Wed, 24 Aug 2016 15:28:15 at 10 http://www.bankcomm.com/BankCommSite/default.shtml
+(httrack -n -%k -%B -N1001 -u2 -%u -iC2 -r1 -T 10 -T10 -R0 -J1024 -R1 -H3 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/new http://www.bankcomm.com/BankCommSite/default.shtml )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:28:15	Warning: 	Cache: damaged cache, trying to repair
+15:28:15	Warning: 	Cache: 29508 bytes successfully recovered in 1 entries
+15:28:15	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/new/index-2.html.tmp already exists
+15:28:15	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+15:28:16	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/new/default.html.tmp already exists
+15:28:17	Info: 	engine: warning: unserialize error for www.bankcomm.com/BankCommSite/default.shtml (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/new/default.html), file disappeared: No such file or directory
+15:28:17	Info: 	engine: warning: unserialize error for 10/ (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/new/index-2.html), file disappeared: No such file or directory
+
+HTTrack Website Copier/3.46 mirror complete in 2 seconds : 5 links scanned, 1 files written (193324 bytes overall), no files updated [58658 bytes received at 29329 bytes/sec]
+(1 errors, 2 warnings, 4 messages)

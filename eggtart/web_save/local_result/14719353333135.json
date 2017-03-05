@@ -1,0 +1,106 @@
+{
+  "create_time": "2016-08-23_14-54-14",
+  "task_id": "372d9715d410cc465b8dbd7c0adfcc4814719352547432",
+  "error": [],
+  "output": "all",
+  "cmd": "SINGLE_ENGINE_TEST",
+  "task_list": [
+    {
+      "url": "https://www.zhzhrf.com/",
+      "web_save_status": false,
+      "save_type": "all",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhzhrf.com"
+    },
+    {
+      "web_save_status": true,
+      "url": "http://www.ycxx110.cn/",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ycxx110.cn",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ycxx110.cn/2016-08-23_14-54-20",
+      "save_type": "html",
+      "web_save_resource_num": {
+        "html_num": "0",
+        "pic_num": "0",
+        "js_num": "0",
+        "css_num": "0"
+      }
+    },
+    {
+      "web_save_status": true,
+      "url": "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/ibsbjstar.ccb.com.cn",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/ibsbjstar.ccb.com.cn/2016-08-23_14-54-23",
+      "save_type": "html",
+      "web_save_resource_num": {
+        "html_num": "0",
+        "pic_num": "0",
+        "js_num": "0",
+        "css_num": "0"
+      }
+    },
+    {
+      "web_save_status": true,
+      "url": "http://www.nxtcw.com.cn/Html/Default.asp",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/2016-08-23_14-54-24",
+      "save_type": "all",
+      "web_save_resource_num": {
+        "html_num": "0",
+        "pic_num": "11",
+        "js_num": "0",
+        "css_num": "2"
+      }
+    },
+    {
+      "web_save_status": true,
+      "url": "http://www.zhcw.com/",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhcw.com",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhcw.com/2016-08-23_14-54-22",
+      "save_type": "html",
+      "web_save_resource_num": {
+        "html_num": "0",
+        "pic_num": "0",
+        "js_num": "0",
+        "css_num": "0"
+      }
+    },
+    {
+      "web_save_status": true,
+      "url": "http://www.abchina.com/cn/",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.abchina.com",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.abchina.com/2016-08-23_14-54-20",
+      "save_type": "html",
+      "web_save_resource_num": {
+        "html_num": "0",
+        "pic_num": "0",
+        "js_num": "0",
+        "css_num": "0"
+      }
+    },
+    {
+      "web_save_status": true,
+      "url": "http://www.bankcomm.com/BankCommSite/default.shtml",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/2016-08-23_14-54-23",
+      "save_type": "all",
+      "web_save_resource_num": {
+        "html_num": "0",
+        "pic_num": "37",
+        "js_num": "0",
+        "css_num": "6"
+      }
+    },
+    {
+      "web_save_status": true,
+      "url": "http://www.ccb.com/nx/index.html",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/2016-08-23_14-55-32",
+      "save_type": "all",
+      "web_save_resource_num": {
+        "html_num": "0",
+        "pic_num": "21",
+        "js_num": "0",
+        "css_num": "6"
+      }
+    }
+  ]
+}

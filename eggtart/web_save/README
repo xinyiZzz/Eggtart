@@ -1,0 +1,180 @@
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+ ***       目录结构介绍，缩进代表模块间调用关系    ****
+
+    WebSaveEngine    引擎框架
+        web_save_start    网页保存模块
+            
+    test_data：测试时保存结果
+    log：日志文件
+    local_result：系统完成的任务结果本地存储目录
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+ ***       网页存在性检测思路：    ****
+
+对返回的页面抽取文本后进行筛选。比如过滤BadRequest等当网页不存在时返回的无效页面
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+ ***       检测网页更新思路：    ****
+
+httrack自带更新检测，效果无法满足要求的话，可考虑下面几种方式
+1、	根据网页关键词来判断（已有）
+2、	根据特定标签内容进行判断，thp/urlwatch 这个库可用，但基于python3，也可用httpwatch。之前通过计算div标签的数量来做
+3、	根据网页的截图的比较来判断，dpxdt库用于网站版本比对，可做
+4、	通过网页文本摘要来判断，sumy库内置很多网页文本摘要算法
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+ ***       仍存在问题（Httrack问题）：    ****
+
+1.	有的时候可以保存，有的时候保存失败
+Error: 	"Receive Error" (-4) after 2 retries at link 10/robots.txt (from primary/primary)
+此类问题
+
+2.	网页可能出现跳转，无法根据当前url获取到其实际浏览时显示的url，很多钓鱼网站借此规避检查
+网页二级跳转的判断依据 （当前所列的几种简单情况已经进行处理）：
+二级跳转的特征：<TITLE>Page has moved</TITLE>  、Images 目录为空   main.html <= 3kb  
+main.html中获取页面跳转的url情况如下： 
+1.	<META HTTP-EQUIV="Refresh" CONTENT="0; URL=https://www.cnsmefs.com/">
+2.	window.location.href="http://qinliancf.com/web/main/index.html";
+3.	<body onLoad="getFrom()">  结合 window.location.href=" ";
+4.	location.href = "http://www.51rz.com/ind/index.html";
+网页可能存在二层以上的跳转，可以设置循环进行处理，此处未做修改。
+例子：META Refresh 跳转的网站有：http://cnsmefs.com    http://yijiedai.com 
+      window.location.href 跳转的网站 http://qinliancf.com   
+	  location.href =      http://www.rozo360.com/index.html
+      
+测试网页中部分测试错误（不全）						
+其他错误 网站本身 
+http://p2p222.com        		停止运行
+http://zhongyingdk.com    		Apache Tomcat/7.0.62
+http://www.pmzaixian.net/index.do 	域名变更为http://www.pangmao.com/
+http://inuodai.com           		没有备案喔
+http://yi-fax.com   					网站访问报错
+http://xiaogouqianqian.com/  		it works 网站他妈丢了
+http://yi-fax.com        			关停
+http://365yxd.com      				域名未授权
+
+3.	有些网站浏览器可以访问，但是httrack 无法抓取 如下两种原因
+内部链接有循环，反爬虫机制，需单独处理
+13:28:51	Warning: 	link is probably looping, type unknown, aborting: www.qiaoshisui.com/?WebShieldDRSessionVerify=dssC4myGkmHhvYSEYkrT
+13:28:51	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+13:28:52	Error: 	"Receive Error" (-4) after 1 retries at link 10/ (from primary/primary)
+13:28:52	Info: 	No data seems to have been transfered during this session! : restoring previous one!
+
+13:27:25	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+13:27:35	Error: 	"Receive Error" (-4) after 1 retries at link 10/ (from primary/primary)
+13:27:45	Error: 	"Connect Time Out" (-2) at link !/ (from primary/primary)
+13:27:45	Info: 	No data seems to have been transfered during this session! : restoring previous one!
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+ ***       Httrack 教程：    ****
+更新一个 
+httrack url -N1 -r1 -iC2 -EN60 -O  path %k 
+
+保存新的
+httrack url -N1 -r1  -EN60 -O  path %k 
+
+
+httrack "http://www.hitwh.edu.cn/" -N1 -r1 -O /home/phishing/websites/
+保存当前网页  只存一层网页
+apt-get install  httrack
+
+EN maximum mirror time in seconds  (60=1 minute, 3600=1 hour) (--max-time[=N])
+
+Z  log - debug (--debug-log)
+  v  log on screen (--verbose)
+  f *log in files (--file-log)
+ 
+p1 save only html files
+--update              update a mirror, without confirmation (-iC2)
+
+#f  always flush log files (--advanced-flushlogs)
+
+Details: Option N
+  N0 Site-structure (default)
+  N1 HTML in web/, images/other files in web/images/
+  N2 HTML in web/HTML, images/other in web/images
+  N3 HTML in web/,  images/other in web/
+  N4 HTML in web/, images/other in web/xxx, where xxx is the file extension (all gif will be placed onto web/gif, for example)
+  N5 Images/other in web/xxx and HTML in web/HTML
+  N99 All files in web/, with random names (gadget !)
+
+ %k  use keep-alive if possible,
+
+-n 保存图片 
+httrack "http://www.hitwh.edu.cn/" -O "./hitwh" "http://www.hitwh.edu.cn/" -v -s0  --depth=1 -n
+httrack "https://www.taobao.com/" -O   "./taobao"  "https://www.taobao.com/" -s0 -N1 -r1 -T60 -R9 -n  -F  "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+
+顺序不能乱 
+httrack  --near -%k -%B  -u2 -%u  https://login.christianmingle.com/logon/christianminglecomredesign?clientid=1014&redirecturl=https%3A%2F%2Fchristianmingle.com%2Fverify&state=442684719&LoginSessionId=818C3890-2016-493D-A9C6-F26C5399796A&scope=long&displaymode=full    -N1001 -iC2 -r1   --timeout 15-T10 --retries 0  -R1  -H1 -O   ./accounts.google.com/new
+
+
+-s0  忽略robots  
+
+httrack  --near -%k -%B -N1001 -u2 -%u  -iC2 -r1   --timeout 15-T10 --retries 0  -R1  -H1  -O a “https://login.christianmingle.com/logon/christianminglecomredesign?clientid=1014&redirecturl=https%3A%2F%2Fchristianmingle.com%2Fverify&state=442684719&LoginSessionId=818C3890-2016-493D-A9C6-F26C5399796A&scope=long&displaymode=full” 
+
+
+
+目录(?)[+] 
+一.HTTrack 网站复制 
+    1.1安装 
+[plain] view plaincopy 
+apt-get install httrack webhttrack  
+    1.2 常用命令 
+[plain] view plaincopy 
+httrack http://www.documentfoundation.org -* +*.htm* +*.pdf -O /home/floeff/websites  
+httrack http://www.leiyanhui.com/ -O E:\test\ -r15 -E3600 -m2000000,300000 -M1000000000 --ext-depth 1 -o0 -s0 -F "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)" -%F "" -*.* +*.htm* +*.shtm* +*.php* +*.asp* +*.do +*.jsp +*.css +*.swf +*.js +*.jp* +*.gif +*.bmp +*.png -N100  
+常用存放规则  
+-N100 直接放到目录根下面，默认站点结构，并且外部站点也放进去  
+-N1004 直接放到目录根下面，文件根据后缀放置，并且外部站点的文件也一起放进去  
+-N1005 直接放到目录下，html放到html文件夹，其他文件也按照后缀放到单独文件夹，并且外部站点的文件也一起放进去  
+文件过滤（白名单）：  
+-*.* +*.htm* +*.shtm* +*.cgi +*.py +*.php* +*.phtm* +*.asp* +*.do +*.jsp +*.css +*.swf +*.js +*.jp* +*.gif +*.bmp +*.png  
+注意,多个任务不能放置到同一个目录里面,不然会提示文件夹锁定  
+另外 对css中 background:#fff url(images/head_bg.gif) repeat-x; 不能识别其中的图片  
+js和swf中的图片 几乎全部无法识别  
+小技巧：  
+在命令行正在执行的时候，连续按下2-4次回车可以看到滚动日志  
+限制类参数  
+-r50 50层  
+-E3600 限制时间为3600秒之内  
+-m50000000 限制非html文件为50m以内  
+-m50000000,100000 限制非html文件为50M html文件为100K  
+-M1000000000 限制总体积为1G  
+-A100000000 限制速度为100m/s  
+-G100000000 下载1G后暂停  
+%e1 前面没有横线,限制外链深度为5层；不知道为何无效，所以用 --ext-depth 1的方法替代了  
+性能参数  
+-%c20 每秒20个连接  
+-c128 文件句柄限制,文档说与操作系统有关系,不一定越大越好  
+-T30 连接超时选项  
+-R5 重试次数限制,暂时不确定超限后是终止任务还是终止文件  
+-J10 速度不到10b/s的时候 放弃下载  
+-H0 不终止任务 -H1 超时的时候终止任务 -H2 速度太慢的时候 -H3 速度太慢或者超时  
+镜像参数  
+-N "%h%p/%n.%t" 文件保存路径  
+-L1 |--long-names禁止使用长文件名，防止url过长或者文件系统不支持  
+-K 保存原来的链接，禁止修改链接地址  
+-x 好像是说外部链接替换成提示消息，应该是和允许下载外链有冲突  
+-o0 智能识别404页面，防止保存大量没用的404页面地址  
+%x0 include 好像是说可以通过md5校验，避免重复的文件  
+蜘蛛参数  
+-b0 禁用cookis 默认是启用  
+-s0 忽略meta-tags and robots.txt -s1和-s2是遵守，但怎么遵守的没看明白  
+浏览参数  
+-F "Mozilla 1.0, Sparc, Solaris 23.54.34" 不需要解释  
+-%F "Mirrored [from host %s [file %s [at %s]]]" 底部代码  
+                详情见http://www.httrack.com/html/fcguide.html 
+
+来源： <http://www.programgo.com/article/13113295271/>
+ 
+
+http://www.linuxquestions.org/questions/linux-software-2/complete-mirror-of-site-with-httrack-4175418011/
+————————————————————————————————————————————————————————————————————————————————————————————————————————

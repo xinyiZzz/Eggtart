@@ -1,0 +1,15 @@
+HTTrack3.46+libhtsjava.so.2 launched on Wed, 24 Aug 2016 15:30:46 at 10 http://www.nxtcw.com.cn/Html/Default.asp
+(httrack -n -%k -%B -N1001 -u2 -%u -iC2 -r1 -T 10 -T10 -R0 -J1024 -R1 -H3 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new http://www.nxtcw.com.cn/Html/Default.asp )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:30:51	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+15:30:51	Info: 	engine: warning: unserialize error for 10/ (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/index-2.html), file disappeared: No such file or directory
+15:30:52	Info: 	engine: warning: unserialize error for 10/ (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/index-2.html), file disappeared: No such file or directory
+No files purged
+
+HTTrack Website Copier/3.46 mirror complete in 16 seconds : 16 links scanned, 13 files written (231690 bytes overall) [237986 bytes received at 14874 bytes/sec]
+(1 errors, 0 warnings, 2 messages)

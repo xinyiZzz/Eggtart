@@ -1,0 +1,35 @@
+HTTrack3.46+libhtsjava.so.2 launched on Wed, 24 Aug 2016 15:30:46 at 10 http://www.ccb.com/nx/index.html
+(httrack -n -%k -%B -N1001 -u2 -%u -iC2 -r1 -T 10 -T10 -R0 -J1024 -R1 -H3 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new http://www.ccb.com/nx/index.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:30:46	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/index-2.html.tmp already exists
+15:30:48	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+15:30:48	Info: 	engine: warning: unserialize error for 10/ (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/index-2.html), file disappeared: No such file or directory
+15:30:49	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/main.css.tmp already exists
+15:30:50	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/sub_bank.css.tmp already exists
+15:30:50	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/ccb_bill_branch.css.tmp already exists
+15:30:53	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110321584223.jpg.tmp already exists
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/public/branch/css/main.css (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/main.css), file disappeared: No such file or directory
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/public/branch/css/sub_bank.css (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/sub_bank.css), file disappeared: No such file or directory
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/public/branch/css/ccb_bill_branch.css (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/ccb_bill_branch.css), file disappeared: No such file or directory
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/nx/share/ad/focus_ad/20160317110036061917.gif (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110036061917.gif), file disappeared: No such file or directory
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/nx/share/ad/focus_ad/20160317110321584223.jpg (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110321584223.jpg), file disappeared: No such file or directory
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/nx/share/ad/focus_ad/20160317110539639567.jpg (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110539639567.jpg), file disappeared: No such file or directory
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/nx/share/ad/focus_ad/20160317110638887037.jpg (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110638887037.jpg), file disappeared: No such file or directory
+15:31:18	Info: 	engine: warning: unserialize error for ccb.com/nx/share/zdtj/product_service_zdtj/srzs.bmp (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/srzs.bmp), file disappeared: No such file or directory
+15:31:19	Info: 	engine: warning: unserialize error for ccb.com/nx/share/zdtj/product_service_zdtj/srzs.bmp (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/srzs.bmp), file disappeared: No such file or directory
+15:31:19	Info: 	engine: warning: unserialize error for ccb.com/nx/share/ad/sale_mini_ad/20160817102009713042.jpg (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160817102009713042.jpg), file disappeared: No such file or directory
+15:31:40	Info: 	Purging /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110321584223.jpg
+15:31:40	Info: 	Purging /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/srzs.bmp
+15:31:40	Info: 	Purging /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160817102009713042.jpg
+15:31:40	Info: 	Purging /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/main.css
+15:31:40	Info: 	Purging /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/sub_bank.css
+15:31:40	Info: 	Purging /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/ccb_bill_branch.css
+15:31:40	Info: 	Purging /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110539639567.jpg
+
+HTTrack Website Copier/3.46 mirror complete in 54 seconds : 31 links scanned, 20 files written (1274743 bytes overall) [1300702 bytes received at 24087 bytes/sec], 27842 bytes transfered using HTTP compression in 3 files, ratio 29%, 1.8 requests per connection
+(1 errors, 0 warnings, 23 messages)

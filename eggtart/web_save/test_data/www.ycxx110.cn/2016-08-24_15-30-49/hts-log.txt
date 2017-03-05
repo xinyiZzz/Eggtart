@@ -1,0 +1,10 @@
+HTTrack3.46+libhtsjava.so.2 launched on Wed, 24 Aug 2016 15:30:46 at 30 http://www.ycxx110.cn/
+(httrack -N1001 -iC2 -r1 -p1 -T 30 -R9 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ycxx110.cn/new http://www.ycxx110.cn/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:30:47	Error: 	"Receive Error" (-4) after 9 retries at link 30/robots.txt (from primary/primary)
+15:30:48	Info: 	Note: due to www.ycxx110.cn remote robots.txt rules, links beginning with these path will be forbidden: /plus/ad_js.php, /plus/advancedsearch.php, /plus/car.php, /plus/carbuyaction.php, /plus/shops_buyaction.php, /plus/erraddsave.php, /plus/posttocar.php, /plus/disdls.php, /plus/feedback_js.php, /plus/mytag_js.php, /plus/rss.php, /plus/search.php, /plus/recommend.php, /plus/stow.php, /plus/count.php, /include, /templets (see in the options to disable this)

@@ -165,9 +165,9 @@ class MainControl(Engine_Model):
 
     def get_all_engine_info(self):
         '''
-        读取server_live表中除主控和测试引擎外的所有引擎的信息，可新增过滤引擎编号
+        读取server_live表中除主控、业务处理引擎、测试引擎外的所有引擎的信息，可新增过滤引擎编号
         '''
-        sql = "select queue_ip, queue_result_name from server_live where status=1 and engine_type Not REGEXP '00|99'"
+        sql = "select queue_ip, queue_result_name from server_live where status=1 and engine_type Not REGEXP '00|01|99'"
         return self.mysql_handle_base.select(sql=sql, fetch_type='all')
 
     def engines_among_task_shift(self):

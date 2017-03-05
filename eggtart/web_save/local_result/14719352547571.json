@@ -1,0 +1,49 @@
+{
+  "create_time": "2016-08-23_14-54-14",
+  "task_id": "372d9715d410cc465b8dbd7c0adfcc4814719352547432",
+  "error": [],
+  "output": "all",
+  "cmd": "SINGLE_ENGINE_TEST",
+  "task_list": [
+    {
+      "url": "http://www.ccb.com/nx/index.html",
+      "save_type": "all",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com"
+    },
+    {
+      "url": "https://www.zhzhrf.com/",
+      "save_type": "all",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhzhrf.com"
+    },
+    {
+      "url": "http://www.nxtcw.com.cn/Html/Default.asp",
+      "save_type": "all",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn"
+    },
+    {
+      "url": "http://www.bankcomm.com/BankCommSite/default.shtml",
+      "save_type": "all",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com"
+    },
+    {
+      "url": "http://www.zhcw.com/",
+      "save_type": "html",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhcw.com"
+    },
+    {
+      "url": "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp",
+      "save_type": "html",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/ibsbjstar.ccb.com.cn"
+    },
+    {
+      "url": "http://www.abchina.com/cn/",
+      "save_type": "html",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.abchina.com"
+    },
+    {
+      "url": "http://www.ycxx110.cn/",
+      "save_type": "html",
+      "save_path": "/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ycxx110.cn"
+    }
+  ]
+}

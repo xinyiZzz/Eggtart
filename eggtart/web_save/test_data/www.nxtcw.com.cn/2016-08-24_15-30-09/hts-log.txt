@@ -1,0 +1,32 @@
+HTTrack3.46+libhtsjava.so.2 launched on Wed, 24 Aug 2016 15:29:53 at 10 http://www.nxtcw.com.cn/Html/Default.asp
+(httrack -n -%k -%B -N1001 -u2 -%u -iC2 -r1 -T 10 -T10 -R0 -J1024 -R1 -H3 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new http://www.nxtcw.com.cn/Html/Default.asp )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:29:53	Warning: 	Cache: damaged cache, trying to repair
+15:29:53	Warning: 	Cache: 1315 bytes successfully recovered in 1 entries
+15:29:53	Info: 	engine: warning: temporary file /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/index-2.html.tmp already exists
+15:29:54	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+15:29:54	Info: 	engine: warning: unserialize error for 10/ (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/index-2.html), file disappeared: No such file or directory
+15:29:55	Info: 	engine: warning: unserialize error for 10/ (/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/index-2.html), file disappeared: No such file or directory
+15:29:55	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Html/Default.asp -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/default.html
+15:29:56	Info: 	engine: transfer-status: link updated: www.nxtcw.com.cn/robots.txt -> 
+15:29:57	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/images/style.css -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/style.css
+15:29:57	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_a_icon_x.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_a_icon_x.gif
+15:29:57	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_b_icon_a.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_b_icon_a.gif
+15:29:57	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_a_icon_a.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_a_icon_a.gif
+15:29:58	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_a_icon_b.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_a_icon_b.gif
+15:29:58	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_a_icon_c.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_a_icon_c.gif
+15:29:58	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_a_icon_d.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_a_icon_d.gif
+15:29:59	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_a_icon_e.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_a_icon_e.gif
+15:29:59	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/item_a_icon_f.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/item_a_icon_f.gif
+15:30:01	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/cc.png -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/cc.png
+15:30:03	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Bcastr_One/caochang1.jpg -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/caochang1.jpg
+15:30:09	Info: 	engine: transfer-status: link added: www.nxtcw.com.cn/Images/link_icon.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.nxtcw.com.cn/new/images/link_icon.gif
+No files purged
+
+HTTrack Website Copier/3.46 mirror complete in 16 seconds : 16 links scanned, 13 files written (231690 bytes overall), 14 files updated [237986 bytes received at 14874 bytes/sec]
+(1 errors, 2 warnings, 17 messages)

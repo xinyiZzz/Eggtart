@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-Name: 主控引擎——任务调度——可疑网站检测任务调度
+Name: 主控引擎——测试任务调度
 Author：XinYi 609610350@qq.com
 Time：2016.5.26
 '''
@@ -15,7 +15,7 @@ from utils import read_config_logging
 logger = read_config_logging()
 
 
-class GRAYS_CHECK(object):
+class ENGINE_TEST(object):
 
     '''
     可疑网站检测任务调度模块，流水线任务引擎调度时，对下一个即将调用的引擎构造
@@ -36,17 +36,19 @@ class GRAYS_CHECK(object):
 
     def web_save(self, job_body):
         '''
-        引擎输入任务构造
+        网页信息保存引擎输入任务构造
         '''
         run_engine_type = job_body['task_engine'].split('-')[0]
-        if run_engine_type == '04':  # 网页下载引擎(下载完整网页)
+        if run_engine_type == '02':  # 网页下载引擎(下载完整网页)
             save_type = 'all'
-        elif run_engine_type == '05':  # 网页下载引擎(仅下载HTML)
+            save_path = 'complete_save_web'
+        elif run_engine_type == '03':  # 网页下载引擎(仅下载HTML)
             save_type = 'html'
+            save_path = 'signal_save_web'
         if job_body['task_list'] == []:
             url_list = job_body['url_list']
             for url in url_list:
-                job_body['task_list'].append({'url': url, 'save_type': save_type, 'save_path': self.get_web_hash_path_abs(url, pjoin(self.WEB_INFO_ROOT_PATH, 'gray_web'))})
+                job_body['task_list'].append({'url': url, 'save_type': save_type, 'save_path': self.get_web_hash_path_abs(url, pjoin(self.WEB_INFO_ROOT_PATH, save_path))})
         else:
             new_task_list = []
             for task in job_body['task_list']:
@@ -55,80 +57,8 @@ class GRAYS_CHECK(object):
             job_body['task_list'] = new_task_list
         return job_body
 
-    def text_collect(self, job_body):
+    def test_engine(self, job_body):
         '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def vtree_collect(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def view_collect(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def text_index(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def structure_index(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def enlighten_check(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def text_check(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def structure_check(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def view_emd(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def whois_search(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def whois_reverse(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def url_exist_detection(self, job_body):
-        '''
-        引擎输入任务构造
-        '''
-        return job_body
-
-    def clawer(self, job_body):
-        '''
-        引擎输入任务构造
+        测试引擎输入任务构造
         '''
         return job_body

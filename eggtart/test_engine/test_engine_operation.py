@@ -46,11 +46,10 @@ class TestEngineOperation():
         '''
         url = one_task['url']
         logger['logger_file_debug'].debug(url)
-        if 'path' in one_task:
-            path = one_task['path']
-            with open(pjoin(path, str(time.time())), 'w') as f:
-                task_result = {url: path}
-                json.dump(task_result, f)
+        path = one_task['path']
+        with open(pjoin(path, str(time.time())), 'w') as f:
+            task_result = {url: path}
+            json.dump(task_result, f)
         task = copy.copy(one_task)  # 设计python深复制浅复制的问题
         task['result'] = 'TestEngine run win! ' + url 
         self.update_task_list(task)

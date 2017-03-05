@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.nav_sub_index{display:none;}
+.sub_content_box{margin-top:10px;background-image:url(../images/sub_content_bg.gif);background-repeat:repeat-y;width:902px;}
+.sub_layout_left{width:187px;float:left;padding-left:38px;padding-bottom:20px;display:inline;}
+.sub_layout_right{width:629px;padding:0px 24px;float:left;background-color:#ffffff;display:inline;}
+
+
+/*分行左侧树状列表菜单*/
+.sub_layout_left ul li{float:none;display:block;min-height:21px;_height:21px;clear:both;line-height:21px;}
+.sub_layout_left ul li a{padding:2px 4px;}
+.sub_layout_left ul li .this{background-color:#ebebeb;}
+.sub_layout_left ul li ul{padding-left:28px;margin-top:-5px;}
+.sub_layout_left ul li ul li ul{padding-left:56px;}
+.sub_layout_left ul li div{color:#0066b3;font-weight:bold;cursor:pointer;height:26px;}
+.sub_layout_left ul li .fold{padding-left:14px;background:url(../images/ico_fold_off.gif) no-repeat 0px 5px;_background-position:0px 7px;}
+.sub_layout_left ul li .fold_on{padding-left:14px;background:url(../images/ico_fold_on.gif) no-repeat 0px 5px;_background-position:0px 7px;}
+.sub_layout_left ul li .off{padding-left:14px;background:url(../images/ico_fold_off.gif) no-repeat 0px 5px;_background-position:0px 7px;}
+
+
+.sub_layout_right_title{font-size:14px;color:#0066b3;font-weight:bold;margin-bottom:15px;font-family:"宋体"}
+.sub_layout_right_content_img{width:95px;height:80px;float:left;}
+.sub_layout_right_content_list{width:534px;float:left;}
+.sub_layout_right_content_list ul{display:block;clear:both;padding-left:18px;margin-bottom:15px;}
+.sub_layout_right_content_list ul li{display:block;float:none;height:27px;background:url(../images/square_black_3px.gif) no-repeat 0px 4px;padding-left:10px;}
+.sub_layout_right_content_list .text_right.blue span{margin:0px 15px;}
+.sub_layout_right .blue_line{height:20px; border-bottom:1px solid #d8e9f9;margin-bottom:20px;}
+
+.sub_layout_left_line{height:2px;margin:25px 38px 25px 0px;font-size:0px;line-height:2px;background:url(../images/module_b_215px_body_line.gif) repeat-x;}
+
+.sub_layout_right2{width:657px;padding:0px 10px;float:left;background-color:#ffffff;}
+.sub_layout_right2 .title {padding:0px 0px 11px 5px;width:auto;height:22px;border-bottom:2px solid #6eaeeb;font-size:16px;font-weight:bold;color:#0066b3;margin:0px 0px 8px 0px}
+.sub_layout_right2 .place{width:auto;padding-left:5px;}
+.sub_layout_right2 .text{padding:0px 15px;text-indent:28px;font-size:14px;line-height:22px;font-family:"宋体"}
+.sub_layout_right2 .text p{margin-bottom:25px;}
+.sub_layout_right2 .text p.bold{text-indent:0px;}
+
+.content_box .layout_right .tstj{display:block;float:none;margin-left:30px;margin-top:20px;}
+.content_box .layout_right .tstj li{display:block;float:none;background:url(../images/square_blue_3px.gif) no-repeat 0px 13px;padding-left:13px;line-height:26px;color:#919191;}
+.content_box .layout_right .tstj li ul li{display:block;float:none;background-image:none;padding:0px;}
+
+
+/*module_665px*/
+.module_665px_title_custom{width:650px;height:39px;background:url(../images/module_665px_title.gif) no-repeat;font-family:"黑体";font-size:14px;font-weight:bold;color:#ffffff;padding-left:15px;padding-top:6px;}
+.module_665px .links{padding:10px 25px 25px 25px;}
+.module_665px .links .links_table img{width:155px; height:75px;}
+
+
+/*分行自定义页面带日期模块*/
+.module_custom{width:645px;margin:0px auto; color:#0066b3; font-family:"宋体";padding-left:20px;}
+.module_custom li{list-style:none outside none;margin-bottom:12px;}
+.module_custom_title{font-size:16px;font-family:"黑体";color:#0066b3;height:16px;margin-top:20px;margin-bottom:0px;}
+.module_custom_title span{font-weight:bold;}
+.module_custom .margin_t_0px{margin-top:0px;}
+.module_custom_content{}
+.module_custom_content ul{margin-top:17px;}
+.module_custom_content_title{width:520px;margin-right:45px;float:left; overflow:hidden;}
+.module_custom_content_date{width:63px;float:left;}
+.module_custom .module_custom_content ul .margin_custom_0px{margin-bottom:0px;}
+.module_custom .module_custom_content .mt{margin-top:17px;margin-top:20px\0;}
+.module_custom .mt{*+margin-top:13px;_margin-top:8px;}

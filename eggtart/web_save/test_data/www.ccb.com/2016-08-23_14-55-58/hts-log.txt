@@ -1,0 +1,23 @@
+HTTrack3.46+libhtsjava.so.2 launched on Tue, 23 Aug 2016 14:55:35 at 10 http://www.ccb.com/nx/index.html
+(httrack -n -%k -%B -N1001 -u2 -%u -iC2 -r1 -T 10 -T10 -R0 -J1024 -R1 -H3 -O /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new http://www.ccb.com/nx/index.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:55:37	Error: 	"Receive Error" (-4) after 1 retries at link 10/robots.txt (from primary/primary)
+14:55:37	Info: 	engine: transfer-status: link updated: ccb.com/nx/index.html -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/index-3.html
+14:55:37	Error: 	"Receive Error" (-4) after 1 retries at link 10/ (from primary/primary)
+14:55:38	Info: 	engine: transfer-status: link updated: ccb.com/public/branch/css/sub_bank.css -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/sub_bank.css
+14:55:40	Info: 	engine: transfer-status: link updated: ccb.com/public/branch/css/main.css -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/main.css
+14:55:40	Info: 	engine: transfer-status: link updated: ccb.com/public/branch/images/icon_redarrow.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/icon_redarrow.gif
+14:55:40	Info: 	engine: transfer-status: link updated: ccb.com/public/branch/images/ico_hot.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/ico_hot.gif
+14:55:47	Info: 	engine: transfer-status: link updated: ccb.com/nx/share/ad/focus_ad/20160317110539639567.jpg -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110539639567.jpg
+14:55:50	Info: 	engine: transfer-status: link updated: ccb.com/nx/share/ad/sale_mini_ad/20160817102009713042.jpg -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160817102009713042.jpg
+14:55:56	Info: 	engine: transfer-status: link updated: ccb.com/nx/share/ad/focus_ad/20160317110321584223.jpg -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110321584223.jpg
+14:55:58	Info: 	engine: transfer-status: link updated: ccb.com/nx/share/ad/focus_ad/20160317110036061917.gif -> /home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/images/20160317110036061917.gif
+No files purged
+
+HTTrack Website Copier/3.46 mirror complete in 23 seconds : 30 links scanned, 26 files written (1879959 bytes overall), 9 files updated [523155 bytes received at 22745 bytes/sec], 27842 bytes transfered using HTTP compression in 3 files, ratio 29%, 1.2 requests per connection
+(2 errors, 0 warnings, 9 messages)

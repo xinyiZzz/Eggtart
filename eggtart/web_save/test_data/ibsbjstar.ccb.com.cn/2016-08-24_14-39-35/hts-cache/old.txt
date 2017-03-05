@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+14:55:36	1214/1214	---M--	404	error ('Not%20Found')	text/html	date:Tue,%2023%20Aug%202016%2006:55:36%20GMT	https://ibsbjstar.ccb.com.cn/robots.txt		(from )
+14:55:36	11324/11324	U--M--	200	updated ('OK')	text/html	date:Tue,%2023%20Aug%202016%2006:55:36%20GMT	https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp	/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/ibsbjstar.ccb.com.cn/new/login_pbc.html	(from )

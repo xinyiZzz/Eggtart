@@ -7,6 +7,8 @@
         test_daemonize   守护进程积基类测试
     Engine_Model    eggtart引擎基类
     errors   异常处理重定义
+    hash_path_builder   基于URL的哈希目录树构建模块
+        web_info_handle     web_info下哈希目录操作   目录转移
     mongo_handle_base   MongoDB操作基类，基于mongoengine库
     mysql_handle_base   格式化拼接SQL语句 v2.2
     server_heart_beat   心跳服务类

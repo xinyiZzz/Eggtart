@@ -2,7 +2,7 @@
 # coding: utf-8
 
 '''
-Name: 业务调度引擎
+Name: 业务处理引擎
 Author：
 Time：2016.7
 '''

@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+15:28:15	193324/193324	U-----	200	untouched ('OK')	text/html	etag:%22pv4df69f6d23a4fb414b32f2228323b3fc%22	http://www.bankcomm.com/BankCommSite/default.shtml	/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.bankcomm.com/new/default.html	(from )
+15:28:17	57829/-1	---M--	404	error ('Not%20Found')	text/html	date:Wed,%2024%20Aug%202016%2007:28:16%20GMT	http://www.bankcomm.com/robots.txt		(from )
