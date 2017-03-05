@@ -138,7 +138,7 @@ class Engine_Model(_Daemonize):
 
     def write_result_to_local_result(self, job_body):
         '''
-        每一个网页保存任务执行完成后调用，将任务执行结果保存到本地
+        每一个任务执行完成后调用，将任务执行结果保存到本地
         '''
         output_path = pjoin(self.CURRENT_PATH, 'local_result')
         if not os.path.exists(output_path):

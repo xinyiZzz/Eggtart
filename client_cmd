@@ -1,14 +1,43 @@
 查看客户端参数方法：./client.sh -cmd HELP
+______________________________________________________________________
 
-单引擎运行指令：./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/single_test_task.json
+单引擎测试指令：
 
-测试任务运行指令：./client.sh -c test_engine_conf.yaml -cmd ENGINE_TEST -ti engine_test_data/test_task.json
+test_engine：
+    根据配置文件获取任务要发送的引擎输入队列，结果写入本地目录和引擎输出队列
+    ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/single_test_task.json
+    直接传递配置信息参数，无配置文件:
+    ./client.sh -qip 127.0.0.1 -qsn TEST_ENGINE_START  -cmd SINGLE_ENGINE_TEST -ti engine_test_data/single_test_task.json
+    结果仅写入引擎输出队列
+    ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/single_test_task.json -gn 1 -o queue 
+    结果仅写入本地指定目录
+    ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/single_test_task.json -gn 1 -o /home/ 
+    分组发送任务
+    ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/single_test_task.json -gn 5
 
-完整格式任务运行指令：
+web_save : 
+    ./client.sh -c web_save_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/web_save_task.json
+
+business_handle:
+    直接运行完整格式任务
+    ./client.sh -c business_handle_conf.yaml -cmd COMPLETE_TASK_TEST -ti engine_test_data/1469843362_37.json
+______________________________________________________________________
+
+测试任务运行指令：
+
+main_control:
+    ./client.sh -c control_conf.yaml -cmd ENGINE_TEST -ti engine_test_data/test_task.json
+    ./client.sh -c control_conf.yaml -cmd ONE_ENGINE_TEST -url https://www.baidu.com/
+    ./client.sh -qip 127.0.0.1 -qsn SYSTEM_CONTROL_START  -cmd ONE_ENGINE_TEST -url https://www.zhzhrf.com/ -te 02-99
+    ./client.sh -qip 127.0.0.1 -qsn SYSTEM_CONTROL_START  -cmd ENGINE_TEST -ti engine_test_data/GRAYS_CHECK_TASK.json -te 02-99
     ./client.sh -c control_conf.yaml -cmd COMPLETE_TASK_TEST -ti engine_test_data/1469843362_37.json
 
-直接传递配置信息参数，无配置文件：    
-    ./client.sh -qip 127.0.0.1 -qsn TEST_ENGINE_START  -cmd SINGLE_ENGINE_TEST -ti engine_test_data/single_test_task.json
-    ./client.sh -qip 127.0.0.1 -qsn SYSTEM_CONTROL_START  -cmd ONE_ENGINE_TEST -url https://www.baidu.com -te 99-01-02  # 实际只会运行99测试引擎, 99执行完后00主控引擎将因为找不到01引擎而报错
-    ./client.sh -qip 127.0.0.1 -qsn SYSTEM_CONTROL_START  -cmd ONE_ENGINE_TEST -url http://icbc.com.cn -te 99-01-02
-                      
+______________________________________________________________________
+
+客户端常用参数解析，查看客户端详细参数可在根目录下运行 python client.py -cmd HELP 查看
+    '-c/--config': "config.yaml that in ./config dir, contains a) server info; b) beanstalkc connection string;", # 调用引擎的配置文件，对应config目录下配置文件
+    '-cmd/--command': "the cmd you want to run, e.g., \"BATCH_GRAYS_CHECK\"", #调用指令，单引擎测试时用SINGLE_ENGINE_TEST指令
+    '-ti/--task_info_list': "the location of the json file for task info", # 任务列表，对应engine_test_data目录下任务文件，任务文件为json格式，内容任意
+    '-gn/--group_num': "the num of the group for task info or url list, default None", # 没个任务最大包含子任务数量，若单任务数量太大，则分组发送给引擎
+    '-o/--output': "the location of the output json file for task result, default None" # 输出文件目录，默认引擎目录下local_result目录，文件名为时间戳；当为queue时，写入config中定义的beanstalk结果队列；否则写入指定目录
+    

@@ -16,7 +16,8 @@ from Engine_Model import Engine_Model
 
 class WebSaveEngine(Engine_Model):
 
-    def __init__(self, config_name='web_save_conf.yaml'):
+    # def __init__(self, config_name='web_save_html_conf.yaml'): # 以仅保存网页html的模式启动
+    def __init__(self, config_name='web_save_conf.yaml'): # 以保存网页完整信息的模式启动
         super(WebSaveEngine, self).__init__(config_name)
         pass
 

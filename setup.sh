@@ -8,6 +8,9 @@ if [ $1 = 'start' ];then
         cd business_handle
 		python BusinessHandle.py start
 		cd ..
+		cd web_save
+		python WebSaveEngine.py start
+		cd ..
 		cd test_engine
 		python TestEngine.py start
 		cd ..
@@ -23,6 +26,11 @@ if [ $1 = 'start' ];then
 		"business_handle")
 		cd business_handle
 		python BusinessHandle.py start
+		cd ..
+		;;
+		"web_save")
+		cd web_save
+		python WebSaveEngine.py start
 		cd ..
 		;;
 		"test_engine")
@@ -41,6 +49,9 @@ elif [ $1 = 'stop' ]; then
         cd business_handle
 		python BusinessHandle.py stop
 		cd ..
+		cd web_save
+		python WebSaveEngine.py stop
+		cd ..
 		cd test_engine
 		python TestEngine.py stop
 		cd ..
@@ -56,6 +67,11 @@ elif [ $1 = 'stop' ]; then
 		"business_handle")
 		cd business_handle
 		python BusinessHandle.py stop
+		cd ..
+		;;
+		"web_save")
+		cd web_save
+		python WebSaveEngine.py stop
 		cd ..
 		;;
 		"test_engine")
@@ -75,6 +91,9 @@ elif [ $1 = 'restart' ]; then
         cd business_handle
 		python BusinessHandle.py restart
 		cd ..
+		cd web_save
+		python WebSaveEngine.py restart
+		cd ..
 		cd test_engine
 		python TestEngine.py restart
 		cd ..
@@ -90,6 +109,11 @@ elif [ $1 = 'restart' ]; then
 		"business_handle")
 		cd business_handle
 		python BusinessHandle.py restart
+		cd ..
+		;;
+		"web_save")
+		cd web_save
+		python WebSaveEngine.py restart
 		cd ..
 		;;
 		"test_engine")

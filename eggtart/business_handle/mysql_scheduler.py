@@ -43,19 +43,12 @@ class MysqlScheduler():
 
     def task_operate(self, job_body):
         if job_body['cmd'] == 'ENGINE_TEST':
-            gray_list.into_gray_list(self.mysql_handle_base, job_body)
+            url_list.into_url_list(self.mysql_handle_base, job_body)
             task_info.into_task_info(self.mysql_handle_base, job_body)
-            task_engine_status.into_task_engine_status(
-                self.mysql_handle_base, job_body)
-            gray_engine_result.into_gray_engine_result(
-                self.mysql_handle_base, job_body)
-            gray_dir_tree.into_gray_dir_tree(self.mysql_handle_base, job_body)
+            task_engine_status.into_task_engine_status(self.mysql_handle_base, job_body)
+            url_save_dir.into_url_save_dir(self.mysql_handle_base, job_body)
         return job_body
-
-    def copy_table_data(self, url):
-        gray_engine_result.copy_gray_engine_result(self.mysql_handle_base, url)
-        gray_list.copy_gray_list(self.mysql_handle_base, url)
-
+        
 
 if __name__ == '__main__':
     mysql_handle = MysqlScheduler(mysql_host='127.0.0.1', mysql_db='test',  mysql_user='root',  mysql_password='zxy')

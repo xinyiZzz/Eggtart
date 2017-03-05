@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Name: url_list表操作方法
+Name: url_list 表操作方法
 Author：XinYi 609610350@qq.com
 Time：2015.9.3
 '''
@@ -84,13 +84,8 @@ def into_url_list(mysql_handle_base, job_body):
 if __name__ == '__main__':
     from mysql_handle_base import MysqlHandleBase
     mysql_handle = MysqlScheduler(mysql_host='127.0.0.1', mysql_db='test',  mysql_user='root',  mysql_password='zxy')
-    copy_gray_list(mysql_handle_base, 'https://www.baidu.com')
-    '''
     urls = ['http://www.baidu.com/',
             'http://www.icbc.com.cn/',
             'http://www.taobao.com/']
     print insert_urls(mysql_handle_base, urls)
     print hash_exist(mysql_handle_base, 'http://www.baidu.com/')
-    # print undate_gray_check_result_new(mysql_handle_base,
-    # 'http://curxzw.cc/', 'title', 2, {'fad': 1})
-    '''

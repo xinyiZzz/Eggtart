@@ -2,24 +2,45 @@
 
 # Eggtart
 
+Eggtart, a distributed web page information processing framework, including web page data crawling, analysis, and results processing
+
+蛋挞，一个分布式网页信息处理框架，包括网页数据爬取、分析、结果业务处理
+
+V2.1
+
 * * *
 
 
 ## Introduction/框架介绍
 
+> 详细说明文档后续待更，如有问题联系邮箱 609610350@qq.com
+> 目前每个目录下均有 README，包含模块基本介绍
+
 ### 目录结构
 
--     config 引擎配置文件模版，yaml格式，系统运行自动加载
--     engine_test_data 引擎测试用任务文件，json格式
--     eggtart 源代码
-          server_base：引擎框架基类
-          test_engine：测试引擎——模版Demo
-          client.py：客户端，用于向指定引擎发送任务
-          main_control: 主控引擎
-          business_handle: 业务处理引擎
--     client.sh 客户端脚本，调用client.py，用于单引擎测试时命令行调用
--     client_cmd 引擎测试用客户端指令
--     setup.sh：引擎启动脚本
+-   config 引擎配置文件模版，yaml格式，系统运行自动加载
+-   engine_test_data 引擎测试用任务文件，json格式
+-   eggtart 源代码
+        server_base：引擎框架基类
+            mysql_handle_base Mysql的轻量级ORM https://github.com/xinyi-spark/MiniORM-MySQL
+            daemonize 守护进程管理基类 https://github.com/xinyi-spark/Daemonize-Manage
+            beanstalk_handle beanstalk的轻量级ORM https://github.com/xinyi-spark/MiniORM-beanstalk
+            hash_path_builder 基于URL构建哈希目录树 https://github.com/xinyi-spark/HashTree
+            threadpool 可循环线程池 https://github.com/xinyi-spark/Threadpool
+        test_engine：测试引擎——模版Demo
+        client.py：客户端，用于向指定引擎发送任务
+        main_control: 主控引擎
+        business_handle: 业务处理引擎
+        web_save: 网页下载引擎
+        html_extract: HTMl信息抽取 https://github.com/xinyi-spark/HtmlExtract-Python
+        domain_analysis: URL分割抽取 https://github.com/xinyi-spark/UrlSplit
+-   client.sh 客户端脚本，调用client.py，用于单引擎测试时命令行调用
+-   client_cmd 引擎测试用客户端指令
+-   engine_test_data: 引擎测试数据
+-   setup.sh：引擎启动脚本
+-   web_info：网页信息库
+-   init.py: 系统初始化脚本
+
 
 ### 单个引擎功能
 
@@ -77,37 +98,12 @@
 
     ./setup reset 引擎名称      ：重启对应引擎
 
-- 其他测试用指令 :    
+    任务启动方法请参考 ./client_cmd
 
-    结果写入本地目录：
-        ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/test_task.json 
-    结果写入结果队列：
-    ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/test_task.json -gn 1 -o queue 
-    # 
-    ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/test_task.json -gn 1 -o /home/ 
-    # 结果写入指定目录
-    ./client.sh -c test_engine_conf.yaml -cmd SINGLE_ENGINE_TEST -ti engine_test_data/test_task.json -gn 1 
-    # 分组发送任务
-        
-    客户端参数解析:
-        '-c/--config': "config.yaml that in ./config dir, contains a) server info; b) beanstalkc connection string;", # 调用引擎的配置文件，对应config目录下配置文件
-        '-cmd/--command': "the cmd you want to run, e.g., \"BATCH_GRAYS_CHECK\"", #调用指令，单引擎测试时用SINGLE_ENGINE_TEST指令
-        '-ti/--task_info_list': "the location of the json file for task info", # 任务列表，对应engine_test_data目录下任务文件，任务文件为json格式，内容任意
-        '-gn/--group_num': "the num of the group for task info or url list, default None", # 没个任务最大包含子任务数量，若单任务数量太大，则分组发送给引擎
-        '-o/--output': "the location of the output json file for task result, default None" # 输出文件目录，默认引擎目录下local_result目录，文件名为时间戳；当为queue时，写入config中定义的beanstalk结果队列；否则写入指定目录
-```
+    ```
 
 - - -
 
 ## contact/联系方式
 
 609610350@qq.com
-
-
-
-
-
-
-
-
-

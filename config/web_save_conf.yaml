@@ -1,0 +1,14 @@
+engine:
+    type: '02'  # web_save 引擎编号为02和03，分别为仅下载html和下载完整网页信息
+    max_task_process_num: 10
+beanstalkc:
+    queue_ip: 172.31.137.240
+    queue_start_name: 'WEB_SAVE_START'
+    queue_result_name: 'WEB_SAVE_RESULT'
+mysql:
+    mysql_host: 172.31.137.214
+    mysql_db: PhishingSparkTest
+    mysql_user: root
+    mysql_password: inet_mysql
+web_save:
+    pool_num: 10  # 线程池数量
