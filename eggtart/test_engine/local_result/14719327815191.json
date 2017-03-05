@@ -1,0 +1,17 @@
+{
+  "create_time": "2016-08-23_14-13-01",
+  "task_id": "eac3d26eea2e97c1c59ac75314b06dff14719327815081",
+  "error": [],
+  "output": "all",
+  "cmd": "SINGLE_ENGINE_TEST",
+  "task_list": [
+    {
+      "url": "test_web1",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/test_engine/test_data/web1"
+    },
+    {
+      "url": "test_web2",
+      "path": "/home/phishing/PhishingSpark/phishing_spark/test_engine/test_data/web2"
+    }
+  ]
+}

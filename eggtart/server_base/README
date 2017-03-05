@@ -1,0 +1,14 @@
+————————————————————————————————————————————————————————————————————————————————————————————————————————
+ ***       目录结构介绍，缩进代表模块间调用关系    ****
+
+    beanstalk_handle    beanstalk操作模块，提供put和get方法
+    config_read    yaml配置文件预处理
+    daemonize    守护进程基类
+        test_daemonize   守护进程积基类测试
+    Engine_Model    eggtart引擎基类
+    errors   异常处理重定义
+    mongo_handle_base   MongoDB操作基类，基于mongoengine库
+    mysql_handle_base   格式化拼接SQL语句 v2.2
+    server_heart_beat   心跳服务类
+    utils   小工具
+————————————————————————————————————————————————————————————————————————————————————————————————————————

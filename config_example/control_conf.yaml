@@ -1,0 +1,12 @@
+engine:
+    type: '00'
+    max_task_process_num: 10
+beanstalkc:
+    queue_ip: 127.0.0.1
+    queue_start_name: 'SYSTEM_CONTROL_START'
+    queue_result_name: 'SYSTEM_CONTROL_RESULT'
+mysql:
+    mysql_host: 127.0.0.1
+    mysql_db: test
+    mysql_user: root
+    mysql_password: zxy

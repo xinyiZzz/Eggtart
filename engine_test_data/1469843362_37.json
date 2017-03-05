@@ -1,0 +1,53 @@
+{
+	"error" : [],
+	"start_time" : "2016-07-30_09-48-48",
+	"add_way" : "test",
+	"task_id" : "a910b425c848b15632d3c32dd96d54f41469843328",
+	"waiting_engine" : ["08"],
+	"url_list" : ["http://icbc.com.cn/"],
+	"cmd" : "GRAYS_CHECK",
+	"running_engine" : [],
+	"create_time" : "2016-07-30_09-48-48",
+	"task_name" : "grays_check_test",
+	"task_list" : [{
+			"web_save_status" : true,
+			"text_collect_status" : true,
+			"save_type" : "all",
+			"url" : "http://icbc.com.cn/",
+			"vtree_collect_status" : true,
+			"save_path" : "/home/phishing/PhishingSpark/web_info/gray_info/icbc.com.cn/010ad6e6/c66aedb0/eadf8345/01ba3203",
+			"path" : "/home/phishing/PhishingSpark/web_info/gray_info/icbc.com.cn/010ad6e6/c66aedb0/eadf8345/01ba3203/2016-07-30_09-48-49",
+			"web_text_feature" : {
+				"ICP" : "",
+				"keyword" : "",
+				"title" : ""
+			},
+			"web_save_resource_num" : {
+				"html_num" : "0",
+				"css_num" : "0",
+				"js_num" : "0",
+				"img_num" : "0"
+			}
+		}
+	],
+	"run_state" : [{
+			"web_save_conf.yaml_engine_type" : "04",
+			"web_save_conf.yaml_engine_id" : "03f110bc9dac3ec76eae5757f22cf8bb",
+			"web_save_conf.yaml_over_time" : "2016-07-30_09-48-49",
+			"web_save_conf.yaml_start_time" : "2016-07-30_09-48-48"
+		}, {
+			"text_collect_conf.yaml_engine_type" : "06",
+			"text_collect_conf.yaml_engine_id" : "f8eb73b80241dd5cfa63c27bb9bb5db5",
+			"text_collect_conf.yaml_start_time" : "2016-07-30_09-48-49",
+			"text_collect_conf.yaml_over_time" : "2016-07-30_09-49-20"
+		}, {
+			"vtree_collect_conf.yaml_start_time" : "2016-07-30_09-49-20",
+			"vtree_collect_conf.yaml_over_time" : "2016-07-30_09-49-22",
+			"vtree_collect_conf.yaml_engine_type" : "07",
+			"vtree_collect_conf.yaml_engine_id" : "c6e0eac3ba4f132a15a481a040256009"
+		}
+	],
+	"output" : "all",
+	"run_over_engine" : ["04", "06", "07"],
+	"task_engine" : "12-14"
+}
