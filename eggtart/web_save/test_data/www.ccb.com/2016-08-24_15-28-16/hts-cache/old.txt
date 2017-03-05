@@ -1,3 +1,0 @@
-date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-15:28:14	236/236	---M--	301	error ('Moved%20Permanently')	text/html	date:Wed,%2024%20Aug%202016%2007:28:14%20GMT	http://www.ccb.com/nx/index.html	/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ccb.com/new/index-3.html	(from )
-15:28:14	182/182	---M--	404	error ('Not%20Found')	text/html	date:Wed,%2024%20Aug%202016%2007:28:14%20GMT	http://www.ccb.com/robots.txt		(from )

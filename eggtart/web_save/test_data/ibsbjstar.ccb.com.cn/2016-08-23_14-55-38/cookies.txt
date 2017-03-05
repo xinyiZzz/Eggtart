@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-ibsbjstar.ccb.com.cn	TRUE	/	FALSE	1999999999	null	4062249482.2336.0000
-

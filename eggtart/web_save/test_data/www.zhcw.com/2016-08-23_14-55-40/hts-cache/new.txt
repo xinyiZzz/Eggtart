@@ -1,3 +1,0 @@
-date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-14:55:38	168413/168413	U--M--	200	updated ('OK')	text/html	date:Tue,%2023%20Aug%202016%2006:51:20%20GMT	http://www.zhcw.com/	/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.zhcw.com/new/index-3.html	(from )
-14:55:38	91/91	U-----	200	untouched ('OK')	text/plain	etag:%22b3a05b3-97-505872cfc2840%22	http://www.zhcw.com/robots.txt		(from )

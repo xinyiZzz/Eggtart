@@ -1,3 +1,0 @@
-date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-15:30:47	541/541	---M--	200	added ('OK')	text/plain	etag:%22eca352aa6b5d11:85423%22	http://www.ycxx110.cn/robots.txt		(from )
-15:30:48	42772/42772	---M--	200	added ('OK')	text/html	etag:%224a33d5de99f7d11:85423%22	http://www.ycxx110.cn/	/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.ycxx110.cn/new/index-3.html	(from )

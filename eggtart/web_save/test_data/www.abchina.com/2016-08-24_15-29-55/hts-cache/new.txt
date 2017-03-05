@@ -1,2 +1,0 @@
-date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-15:29:54	208419/208419	U-----	200	untouched ('OK')	text/html	etag:%221D1FDD408069C00%22	http://www.abchina.com/cn/	/home/phishing/PhishingSpark/phishing_spark/web_save/test_data/www.abchina.com/new/index-3.html	(from )

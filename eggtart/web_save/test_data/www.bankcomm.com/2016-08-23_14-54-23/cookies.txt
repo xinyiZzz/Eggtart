@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-www.bankcomm.com	TRUE	/	FALSE	1999999999	bankcommportal	lN//eS4Md1Cq95ZWhPRm+NeFngKcSD3SJqhreN6id6GygZJCo+8d/ZupNZIv3t//VR6IdJIWXEt4L6A=
-

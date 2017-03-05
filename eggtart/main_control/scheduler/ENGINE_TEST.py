@@ -48,7 +48,7 @@ class ENGINE_TEST(object):
         if job_body['task_list'] == []:
             url_list = job_body['url_list']
             for url in url_list:
-                job_body['task_list'].append({'url': url, 'save_type': save_type, 'save_path': self.get_web_hash_path_abs(url, pjoin(self.WEB_INFO_ROOT_PATH, save_path))})
+                job_body['task_list'].append({'url': url, 'save_type': save_type, 'save_path': self.get_web_hash_path_abs(url, pjoin(self.WEB_INFO_ROOT_PATH, save_path), 1)})
         else:
             new_task_list = []
             for task in job_body['task_list']:

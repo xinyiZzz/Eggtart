@@ -21,19 +21,19 @@ V2.1
 -   config 引擎配置文件模版，yaml格式，系统运行自动加载
 -   engine_test_data 引擎测试用任务文件，json格式
 -   eggtart 源代码
---        server_base：引擎框架基类
-            mysql_handle_base Mysql的轻量级ORM https://github.com/xinyi-spark/MiniORM-MySQL
-            daemonize 守护进程管理基类 https://github.com/xinyi-spark/Daemonize-Manage
-            beanstalk_handle beanstalk的轻量级ORM https://github.com/xinyi-spark/MiniORM-beanstalk
-            hash_path_builder 基于URL构建哈希目录树 https://github.com/xinyi-spark/HashTree
-            threadpool 可循环线程池 https://github.com/xinyi-spark/Threadpool
-        test_engine：测试引擎——模版Demo
-        client.py：客户端，用于向指定引擎发送任务
-        main_control: 主控引擎
-        business_handle: 业务处理引擎
-        web_save: 网页下载引擎
-        html_extract: HTMl信息抽取 https://github.com/xinyi-spark/HtmlExtract-Python
-        domain_analysis: URL分割抽取 https://github.com/xinyi-spark/UrlSplit
+ -   server_base：引擎框架基类
+  --   mysql_handle_base Mysql的轻量级ORM https://github.com/xinyi-spark/MiniORM-MySQL
+  --   daemonize 守护进程管理基类 https://github.com/xinyi-spark/Daemonize-Manage
+  --   beanstalk_handle beanstalk的轻量级ORM https://github.com/xinyi-spark/MiniORM-beanstalk
+  --   hash_path_builder 基于URL构建哈希目录树 https://github.com/xinyi-spark/HashTree
+  --   threadpool 可循环线程池 https://github.com/xinyi-spark/Threadpool
+ -   test_engine：测试引擎——模版Demo
+ -   client.py：客户端，用于向指定引擎发送任务
+ -   main_control: 主控引擎
+ -   business_handle: 业务处理引擎
+ -   web_save: 网页下载引擎
+ -   html_extract: HTMl信息抽取 https://github.com/xinyi-spark/HtmlExtract-Python
+ -   domain_analysis: URL分割抽取 https://github.com/xinyi-spark/UrlSplit
 -   client.sh 客户端脚本，调用client.py，用于单引擎测试时命令行调用
 -   client_cmd 引擎测试用客户端指令
 -   engine_test_data: 引擎测试数据
