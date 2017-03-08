@@ -45,6 +45,7 @@ V2.1
 ### 单个引擎功能
 
     新建引擎可仿照/eggtart/test_engine中调用方式，重写TestEngine.py文件中read_config、init_object、handle_task这三个函数来自定义引擎，主要功能包括：
+    
     1) 以守护进程的方式启动引擎，输出日志写入/log目录下，启动时调用init_object函数初始化引擎具体操作类
     2) 读取/config目录下引擎指定的配置文件，其中server、beanstalkc、mysql三个配置部分会自动读取，其它自定义的配置文件需要重写read_config函数读取
     3) 实现引擎心跳，写入mysql中server_live表中
