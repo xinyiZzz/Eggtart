@@ -8,8 +8,8 @@
     {
       "web_save_status": true,
       "url": "https://www.baidu.com",
-      "save_path": "/home/phishing/PhishingSpark/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a",
-      "path": "/home/phishing/PhishingSpark/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a/2016-08-15_11-08-52",
+      "save_path": "/home/Eggtart/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a",
+      "path": "/home/Eggtart/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a/2016-08-15_11-08-52",
       "save_type": "all",
       "web_save_resource_num": {
         "html_num": "8",
@@ -26,8 +26,8 @@
   ],
   "running_engine": [],
   "run_error_engine": [],
-  "cmd": "GRAYS_CHECK",
-  "task_name": "grays_check_test",
+  "cmd": "ENGINE_TEST",
+  "task_name": "engine_test",
   "error": [],
   "run_state": [
     {

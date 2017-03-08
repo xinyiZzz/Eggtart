@@ -92,7 +92,7 @@ avaliable_cmds = {
             'value': []
         }
     },
-    'ONE_ENGINE_TEST': {},  # 和GRAYS_CHECK相同，将ONE_GRAYS_CHECK转换为GRAYS_CHECK指令再进行处理
+    'ONE_ENGINE_TEST': {},  # 和ENGINE_TEST相同，将ONE_ENGINE_TEST转换为ENGINE_TEST指令再进行处理
     'LIST_SERVERS': {},
     'SERVER_QSIZES': {},
 }

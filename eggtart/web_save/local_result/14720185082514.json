@@ -15,42 +15,42 @@
     {
       "url": "http://www.ccb.com/nx/index.html",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/www.ccb.com/2c0a4571/0a944414/8aeacb09/e7df88cc"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.ccb.com/2c0a4571/0a944414/8aeacb09/e7df88cc"
     },
     {
       "url": "https://www.zhzhrf.com/",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/www.zhzhrf.com/2010839d/6c9da54e/80a0b07a/83d8d070"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.zhzhrf.com/2010839d/6c9da54e/80a0b07a/83d8d070"
     },
     {
       "url": "http://www.nxtcw.com.cn/Html/Default.asp",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/www.nxtcw.com.cn/b49ee28f/0fcf7bc1/c0a36e97/679e2bb8"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.nxtcw.com.cn/b49ee28f/0fcf7bc1/c0a36e97/679e2bb8"
     },
     {
       "url": "http://www.bankcomm.com/BankCommSite/default.shtml",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/www.bankcomm.com/8bf88071/3258f8fe/9b3a1757/7b0dc46e"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.bankcomm.com/8bf88071/3258f8fe/9b3a1757/7b0dc46e"
     },
     {
       "url": "http://www.zhcw.com/",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/www.zhcw.com/e262c061/c6e8c4bd/5b25f07b/09a1a033"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.zhcw.com/e262c061/c6e8c4bd/5b25f07b/09a1a033"
     },
     {
       "url": "https://ibsbjstar.ccb.com.cn/app/V5/CN/STY6/login_pbc.jsp",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/ibsbjstar.ccb.com.cn/9100b1a9/a5057a37/583ab429/87f9eb7e"
+      "save_path": "/home/Eggtart/web_info/gray_web/ibsbjstar.ccb.com.cn/9100b1a9/a5057a37/583ab429/87f9eb7e"
     },
     {
       "url": "http://www.abchina.com/cn/",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/www.abchina.com/2019888a/59355734/62ad049a/5d7feaaa"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.abchina.com/2019888a/59355734/62ad049a/5d7feaaa"
     },
     {
       "url": "http://www.ycxx110.cn/",
       "save_type": "all",
-      "save_path": "/home/phishing/Phishing/web_info/gray_web/www.ycxx110.cn/a418f08f/880f2e67/bc4bd3fd/08f41602"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.ycxx110.cn/a418f08f/880f2e67/bc4bd3fd/08f41602"
     }
   ],
   "create_time": "2016-08-24_14-01-48",
@@ -60,8 +60,8 @@
     "04"
   ],
   "run_error_engine": [],
-  "cmd": "GRAYS_CHECK",
-  "task_name": "grays_check_test",
+  "cmd": "ENGINE_TEST",
+  "task_name": "engine_test",
   "error": [],
   "run_state": [
     {

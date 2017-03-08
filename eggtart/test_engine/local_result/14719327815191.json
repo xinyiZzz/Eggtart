@@ -7,11 +7,11 @@
   "task_list": [
     {
       "url": "test_web1",
-      "path": "/home/phishing/PhishingSpark/phishing_spark/test_engine/test_data/web1"
+      "path": "/home/Eggtart/eggtart/test_engine/test_data/web1"
     },
     {
       "url": "test_web2",
-      "path": "/home/phishing/PhishingSpark/phishing_spark/test_engine/test_data/web2"
+      "path": "/home/Eggtart/eggtart/test_engine/test_data/web2"
     }
   ]
 }

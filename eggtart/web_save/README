@@ -82,7 +82,7 @@ httrack url -N1 -r1 -iC2 -EN60 -O  path %k
 httrack url -N1 -r1  -EN60 -O  path %k 
 
 
-httrack "http://www.hitwh.edu.cn/" -N1 -r1 -O /home/phishing/websites/
+httrack "http://www.hitwh.edu.cn/" -N1 -r1 -O /home/Eggtart/websites/
 保存当前网页  只存一层网页
 apt-get install  httrack
 

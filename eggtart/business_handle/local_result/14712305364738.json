@@ -7,10 +7,10 @@
   "url_list": [
     "https://www.baidu.com"
   ],
-  "cmd": "GRAYS_CHECK",
+  "cmd": "ENGINE_TEST",
   "running_engine": [],
   "create_time": "2016-08-15_11-08-51",
-  "task_name": "grays_check_test",
+  "task_name": "engine_test",
   "error": [],
   "run_state": [],
   "output": "all",

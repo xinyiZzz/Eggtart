@@ -1,5 +1,5 @@
 {
-  "task_name": "grays_check_test",
+  "task_name": "engine_test",
   "task_id": "1d2b97507f74a1aa1a9bf6f8416b3f5314712305311558",
   "run_win_engine": [],
   "waiting_engine": [
@@ -9,7 +9,7 @@
   "url_list": [
     "https://www.baidu.com"
   ],
-  "cmd": "GRAYS_CHECK",
+  "cmd": "ENGINE_TEST",
   "running_engine": [],
   "create_time": "2016-08-15_11-08-51",
   "add_way": "test",
@@ -22,7 +22,7 @@
     {
       "url": "https://www.baidu.com",
       "save_type": "all",
-      "save_path": "/home/phishing/PhishingSpark/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a"
     }
   ]
 }

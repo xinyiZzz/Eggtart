@@ -58,7 +58,7 @@ V2.1
 
 - 单引擎调试运行方法
 
-    注：若Mysql和beanstalk没安装在本机，需修改/config目录下对应引擎配置文件的queue_ip，mysql_host字段，若MySQL库不使用Test命名，需修改mysql_db字段。每个引擎对应/eggtart 目录下的一个子目录，/phishing_spark/test_engine目录为引擎模版，下面以其为例介绍
+    注：若Mysql和beanstalk没安装在本机，需修改/config目录下对应引擎配置文件的queue_ip，mysql_host字段，若MySQL库不使用Test命名，需修改mysql_db字段。每个引擎对应/eggtart 目录下的一个子目录，/eggtart/test_engine目录为引擎模版，下面以其为例介绍
     
     1.  进入/Eggtart根目录，启动指令如下。
 

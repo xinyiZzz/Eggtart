@@ -1,5 +1,5 @@
 {
-  "task_name": "grays_check_test",
+  "task_name": "engine_test",
   "waiting_engine": [],
   "url_list": [
     "https://www.baidu.com"
@@ -8,7 +8,7 @@
     {
       "url": "https://www.baidu.com",
       "save_type": "all",
-      "save_path": "/home/phishing/PhishingSpark/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a"
+      "save_path": "/home/Eggtart/web_info/gray_web/www.baidu.com/f9751de4/31104b12/5f48dd79/cc55822a"
     }
   ],
   "create_time": "2016-08-15_11-08-51",
@@ -18,7 +18,7 @@
     "04"
   ],
   "run_error_engine": [],
-  "cmd": "GRAYS_CHECK",
+  "cmd": "ENGINE_TEST",
   "add_way": "test",
   "error": [],
   "run_state": [

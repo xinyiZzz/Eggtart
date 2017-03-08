@@ -62,7 +62,7 @@ def deal_other_error():
             except:
                 logger.error('*args: ' + str(args))
                 traceback.print_exc()
-                raise
+                return False
         return __deco
     return _deco
 
@@ -111,7 +111,7 @@ class MysqlHandleBase():
         # 一旦该表后面插入了新数据，之前的连接就会查不到新数据
         # 所以根据情况，一般情况下最好开启 autocommit
         self.db_conn.autocommit(True)
-        # logger.debug('connect mysql win, ip: %s' % self.mysql_host)
+        logger.debug('connect mysql win, ip: %s' % self.mysql_host)
         return True
 
     @deal_mysql_error()
@@ -304,7 +304,7 @@ class MysqlHandleBase():
                 logger.error('operate_mysql error, sql: %s, param: %s, require_type: %s, return_id: %s, fetch_type: %s' % (
                     sql, param, require_type, return_id, fetch_type))
                 traceback.print_exc()
-                raise
+                return False
             # 连接MySQL服务器超时，则重新连接，如果重新连接失败，说明数据库出现其他问题，则退出程序
             re_connect_result = self.connect_MySQL()
             if re_connect_result is True:
@@ -314,7 +314,7 @@ class MysqlHandleBase():
         finally:
             self.close_connnection()
 
-    def select(self, table_name=None, fields=['*'], wheres={}, sql=None, fetch_type='one', orders='', limits=''):
+    def select(self, table_name=None, fields=[], wheres={}, sql=None, fetch_type='one', orders='', limits=''):
         '''
         查询操作，有两种工作方式：
         1、sql：待执行sql语句，需为str类型，不能为unicode等
@@ -343,7 +343,6 @@ class MysqlHandleBase():
         1、sql：待执行sql语句
         2、table_name：待查询表名
            field：待插入字段，如：{'task_id': [1, 'd']}
-        return_id: 是否返回插入的ID
         '''
         if sql is None:
             sql = self.insert_sql(table_name, fields)
@@ -359,7 +358,6 @@ class MysqlHandleBase():
         param: 一次插入多条记录时的数据元祖，例如(('2',), ('3',))，
                insert_sql函数得到的sql语句为：
                "insert into user(name,created) values(%s,%s)"，此时需提供param
-        return_id: 是否返回插入的ID
         '''
         sql = self.insert_sql_format(table_name, fields)
         if sql is False or param is None:
@@ -424,8 +422,8 @@ class MysqlHandleBase():
 
 
 if __name__ == '__main__':
-    mysql_handle = MysqlHandleBase(mysql_host='172.31.137.214', mysql_user='root', mysql_password='inet_mysql',
-                                   mysql_db='PhishingSparkTest')
+    mysql_handle = MysqlHandleBase(mysql_host='127.0.0.1', mysql_user='root', mysql_password='',
+                                   mysql_db='')
     # 查询举例
     '''
     table_name = 'gray_list'
@@ -443,17 +441,12 @@ if __name__ == '__main__':
     engine_type = '01'
     print mysql_handle.select(table_name, fields=['engine_num'], wheres={'type': [engine_type, 's']}, fetch_type='one', orders='engine_num DESC')
     '''
-    '''
-    # 暂时无法格式化处理where中字段Not REGEXP的情况，可直接用sql语句
-    sql = "select queue_ip, queue_result_name from server_live where status=1 and engine_type Not REGEXP '00|19'"
-    return self.mysql_handle_base.select(sql=sql, fetch_type='all')
-    '''
 
     # 更新举例
     '''
-    table_name = 'task_info'
-    fields = {'user_id': [2, 'd']}  # wait to update fields
-    wheres = {'task_id': ['00439a2d516ff5c00beb5415659a97d216545789894', 's']}
+    table_name = 'task_result'
+    fields = {'task_state': [2, 'd']}  # wait to update fields
+    wheres = {'task_id': [3, 'd'], 'start_time': ['2015-06-11 11:22:53', 's']}
     result = mysql_handle.update(table_name, fields, wheres)
     print result
     print '_______________________________________________'
